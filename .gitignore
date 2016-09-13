@@ -1,1 +1,11 @@
 /bin/
+/javazone/nbproject/private/
+/javazone/build/javazone/nbproject/
+javazone/build.xml
+javazone/nbproject/build-impl.xml
+javazone/nbproject/genfiles.properties
+javazone/nbproject/private
+javazone/nbproject/project.properties
+javazone/nbproject/project.xml
+javazone/build/classes
+javazone/manifest.mf
