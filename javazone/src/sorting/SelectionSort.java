@@ -6,7 +6,7 @@ import java.util.Arrays;
  *
  * @author dhirendra
  */
-public class SelectionSearch {
+public class SelectionSort {
     
     public static void main(String[] args) {
         int[] array = {31, 15, 6, 2, 1, 10, 2, 2, -1, 4, 2, 7, 7, 90, 45};
