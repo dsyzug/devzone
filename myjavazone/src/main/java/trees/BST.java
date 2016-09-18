@@ -15,7 +15,7 @@ public class BST<E extends Comparable<? super E>> {
     TreeNode<E> root;
 
     /**
-     * Constructor
+     * Constructor with root node value.
      *
      * @param rootValue
      */
@@ -23,6 +23,12 @@ public class BST<E extends Comparable<? super E>> {
         this.root = new TreeNode<>(rootValue, null);
     }
 
+    /**
+     * Inserts a node containing value toInsert in BST. Returns true on success
+     * false if node with same value is already present.
+     * @param toInsert
+     * @return 
+     */
     public boolean insert(E toInsert) {
         TreeNode<E> curr = root;
         int comp = toInsert.compareTo(curr.getData());
