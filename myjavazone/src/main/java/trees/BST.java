@@ -26,8 +26,9 @@ public class BST<E extends Comparable<? super E>> {
     /**
      * Inserts a node containing value toInsert in BST. Returns true on success
      * false if node with same value is already present.
+     *
      * @param toInsert
-     * @return 
+     * @return
      */
     public boolean insert(E toInsert) {
         TreeNode<E> curr = root;
@@ -38,6 +39,7 @@ public class BST<E extends Comparable<? super E>> {
             } else {
                 curr = curr.getRightChild();
             }
+            comp = toInsert.compareTo(curr.getData());
         }
 
         if (comp == 0) {
@@ -50,6 +52,25 @@ public class BST<E extends Comparable<? super E>> {
             curr.setRightChild(toInsert);
         }
         return true;
+    }
+
+    /**
+     * <h3>Deletes a node in BST</h3>
+     * If node to be deleted is:
+     * <ul>
+     * <li>Has no children (leaf node). Easy case set parent's</li>
+     * <li>Has 1 child: Medium.</li>
+     * <li>Has 2 children: Little bit tricky. Find smallest element in right
+     * subtree (will have null left child) say, minRight. Use this nodes value to update the node with value toDelete. Delete minRight from tree(Case 1).
+     * </li>
+     * </ul>
+     *
+     * @param toDelete
+     * @return true on success false if no matching value.
+     */
+    public boolean delete(E toDelete) {
+        
+        return false;
     }
 
     /**
@@ -77,11 +98,11 @@ public class BST<E extends Comparable<? super E>> {
     public void levelOrder() {
         StringBuilder path = new StringBuilder();
         levelOrder(this.root, path);
-        System.out.println("lever order path: " + path.toString());
+        System.out.println("\nLevelOrderTraversalPath : " + path.toString());
     }
 
     /**
-     * 
+     *
      * @param node target traversal node
      * @param path traversal path
      */

@@ -17,8 +17,10 @@ public class BSTTest {
 		tree.insert("F");
 		tree.insert("E");
 		tree.insert("G");
-		
 		tree.levelOrder();
+                
+                tree.delete("E");
+                tree.levelOrder();
 	}
 
 }
