@@ -38,7 +38,7 @@ public class TreeNode<E> {
 	}
 
 	public void visit() {
-		System.out.println(data + "->");
+		System.out.print(data + "->");
 	}
 
 	public E getData() {
